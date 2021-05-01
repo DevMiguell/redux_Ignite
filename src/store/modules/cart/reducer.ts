@@ -1,5 +1,12 @@
-function cart() {
-  return []
+import { Reducer } from "redux";
+import { ICartState } from "./types";
+
+const INICIAL_STATE: ICartState = {
+  items: []
 }
 
-export default cart
+const cart: Reducer<ICartState> = () => {
+  return INICIAL_STATE;
+}
+
+export default cart;
